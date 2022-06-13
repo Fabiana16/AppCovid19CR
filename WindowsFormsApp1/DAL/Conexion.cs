@@ -380,6 +380,136 @@ namespace DAL
             }
         }//fin del método consultarIndice
 
+        public ArrayList graficoSintomasComunes()
+        {
+            ArrayList sintomas = new ArrayList();
+
+            try
+            {
+
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Sp_cns_SintomasComunes_Provincia]";
+
+                this.dataReader = this.command.ExecuteReader();
+                //pregunta si tiene datos
+                while (this.dataReader.Read())
+                {
+                    sintomas.Add(this.dataReader.GetString(0));
+
+                }
+                // else return -1;
+                return sintomas;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método consultarIndice
+
+        public ArrayList graficoSintomasComunes2()
+        {
+            ArrayList sintomas = new ArrayList();
+
+            try
+            {
+
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Sp_cns_SintomasComunes_Provincia]";
+
+                this.dataReader = this.command.ExecuteReader();
+                //pregunta si tiene datos
+                while (this.dataReader.Read())
+                {
+                    sintomas.Add(this.dataReader.GetInt32(1));
+
+                }
+                // else return -1;
+                return sintomas;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método consultarIndice
+
+        public ArrayList graficoAsintomaticosGenero()
+        {
+            ArrayList genero = new ArrayList();
+
+            try
+            {
+
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Cns_CantCasos_Asintomatico_Genero]";
+
+                this.dataReader = this.command.ExecuteReader();
+                //pregunta si tiene datos
+                while (this.dataReader.Read())
+                {
+                    genero.Add(this.dataReader.GetString(0));
+
+                }
+                // else return -1;
+                return genero;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método consultarIndice
+
+        public ArrayList graficoAsintomaticosGenero2()
+        {
+            ArrayList cant = new ArrayList();
+
+            try
+            {
+
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Cns_CantCasos_Asintomatico_Genero]";
+
+                this.dataReader = this.command.ExecuteReader();
+                //pregunta si tiene datos
+                while (this.dataReader.Read())
+                {
+                    cant.Add(this.dataReader.GetInt32(1));
+
+                }
+                // else return -1;
+                return cant;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método consultarIndice
+
+
+
+
+
+
+
         public void AgregarDetalleSintoma(SintomasDetalle sintomasDetalle)
         {
             try

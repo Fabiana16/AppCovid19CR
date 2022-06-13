@@ -160,9 +160,9 @@ namespace WindowsFormsApp1
             try
             {
                 panelFondo.Visible = false;
-                FrmEsta frm = new FrmEsta();
-                frm.chartGenero.Visible = false;
-                frm.chartProvincia.Visible = false;
+                FrmEstadistica frm = new FrmEstadistica();
+                frm.chartBarras.Visible = false;
+                frm.chartDona.Visible = false;
                 frm.MdiParent = this;
                 frm.Dock = DockStyle.Fill;
                 frm.Show();

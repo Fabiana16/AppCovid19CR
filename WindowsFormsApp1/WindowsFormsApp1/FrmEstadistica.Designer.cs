@@ -1,5 +1,4 @@
-﻿
-namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1
 {
     partial class FrmEstadistica
     {
@@ -29,208 +28,139 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ptbSalir = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.chartBarras = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDona = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtgDatosComunes = new System.Windows.Forms.DataGridView();
-            this.dtgDatosDuracion = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtgDatosCantGenero = new System.Windows.Forms.DataGridView();
-            this.dtgDatosCantProvincia = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSalir)).BeginInit();
+            this.comboBoxOpcEstadistica = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBarras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDona)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosComunes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosDuracion)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosCantGenero)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosCantProvincia)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // chartBarras
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.ptbSalir);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(915, 100);
-            this.panel1.TabIndex = 1;
+            this.chartBarras.BackColor = System.Drawing.Color.Transparent;
+            this.chartBarras.BorderlineColor = System.Drawing.Color.Transparent;
+            this.chartBarras.BorderSkin.PageColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartBarras.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartBarras.Legends.Add(legend1);
+            this.chartBarras.Location = new System.Drawing.Point(212, 198);
+            this.chartBarras.Name = "chartBarras";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartBarras.Series.Add(series1);
+            this.chartBarras.Size = new System.Drawing.Size(677, 402);
+            this.chartBarras.TabIndex = 0;
+            this.chartBarras.Text = "chart1";
             // 
-            // ptbSalir
+            // chartDona
             // 
-            this.ptbSalir.Image = global::WindowsFormsApp1.Properties.Resources._16__Db_cancel_;
-            this.ptbSalir.Location = new System.Drawing.Point(868, 3);
-            this.ptbSalir.Name = "ptbSalir";
-            this.ptbSalir.Size = new System.Drawing.Size(47, 38);
-            this.ptbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbSalir.TabIndex = 0;
-            this.ptbSalir.TabStop = false;
-            this.ptbSalir.Click += new System.EventHandler(this.ptbSalir_Click);
+            this.chartDona.BackColor = System.Drawing.Color.Transparent;
+            this.chartDona.BorderlineColor = System.Drawing.Color.Transparent;
+            this.chartDona.BorderSkin.PageColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chartDona.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartDona.Legends.Add(legend2);
+            this.chartDona.Location = new System.Drawing.Point(250, 198);
+            this.chartDona.Name = "chartDona";
+            this.chartDona.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series2.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series2.BorderWidth = 0;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartDona.Series.Add(series2);
+            this.chartDona.Size = new System.Drawing.Size(650, 390);
+            this.chartDona.TabIndex = 1;
+            this.chartDona.Text = "chart2";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.dtgDatosComunes);
-            this.panel2.Controls.Add(this.dtgDatosDuracion);
-            this.panel2.Location = new System.Drawing.Point(6, 117);
+            this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(579, 485);
-            this.panel2.TabIndex = 2;
+            this.panel2.Size = new System.Drawing.Size(1025, 99);
+            this.panel2.TabIndex = 19;
             // 
-            // label2
+            // label6
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 212);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(245, 26);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Sintomas más comunes";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(44, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(193, 38);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "ESTADISTICAS";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 18);
+            this.label1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(92, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Promedio de duración de los síntomas";
+            this.label1.Size = new System.Drawing.Size(235, 28);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Elija el tipo de estadistica:";
             // 
-            // dtgDatosComunes
+            // comboBoxOpcEstadistica
             // 
-            this.dtgDatosComunes.AllowUserToAddRows = false;
-            this.dtgDatosComunes.AllowUserToDeleteRows = false;
-            this.dtgDatosComunes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgDatosComunes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatosComunes.Location = new System.Drawing.Point(6, 247);
-            this.dtgDatosComunes.Name = "dtgDatosComunes";
-            this.dtgDatosComunes.ReadOnly = true;
-            this.dtgDatosComunes.RowHeadersWidth = 62;
-            this.dtgDatosComunes.RowTemplate.Height = 28;
-            this.dtgDatosComunes.Size = new System.Drawing.Size(556, 150);
-            this.dtgDatosComunes.TabIndex = 1;
+            this.comboBoxOpcEstadistica.FormattingEnabled = true;
+            this.comboBoxOpcEstadistica.Location = new System.Drawing.Point(345, 148);
+            this.comboBoxOpcEstadistica.Name = "comboBoxOpcEstadistica";
+            this.comboBoxOpcEstadistica.Size = new System.Drawing.Size(346, 24);
+            this.comboBoxOpcEstadistica.TabIndex = 21;
+            this.comboBoxOpcEstadistica.SelectionChangeCommitted += new System.EventHandler(this.comboBoxOpcEstadistica_SelectionChangeCommitted);
             // 
-            // dtgDatosDuracion
+            // FrmEsta
             // 
-            this.dtgDatosDuracion.AllowUserToAddRows = false;
-            this.dtgDatosDuracion.AllowUserToDeleteRows = false;
-            this.dtgDatosDuracion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgDatosDuracion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatosDuracion.Location = new System.Drawing.Point(3, 53);
-            this.dtgDatosDuracion.Name = "dtgDatosDuracion";
-            this.dtgDatosDuracion.ReadOnly = true;
-            this.dtgDatosDuracion.RowHeadersWidth = 62;
-            this.dtgDatosDuracion.RowTemplate.Height = 28;
-            this.dtgDatosDuracion.Size = new System.Drawing.Size(559, 150);
-            this.dtgDatosDuracion.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.dtgDatosCantGenero);
-            this.panel3.Controls.Add(this.dtgDatosCantProvincia);
-            this.panel3.Location = new System.Drawing.Point(601, 117);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 485);
-            this.panel3.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(301, 26);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Cantidad de casos-provincia";
-            // 
-            // dtgDatosCantGenero
-            // 
-            this.dtgDatosCantGenero.AllowUserToAddRows = false;
-            this.dtgDatosCantGenero.AllowUserToDeleteRows = false;
-            this.dtgDatosCantGenero.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgDatosCantGenero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatosCantGenero.Location = new System.Drawing.Point(8, 247);
-            this.dtgDatosCantGenero.Name = "dtgDatosCantGenero";
-            this.dtgDatosCantGenero.ReadOnly = true;
-            this.dtgDatosCantGenero.RowHeadersWidth = 62;
-            this.dtgDatosCantGenero.RowTemplate.Height = 28;
-            this.dtgDatosCantGenero.Size = new System.Drawing.Size(302, 150);
-            this.dtgDatosCantGenero.TabIndex = 5;
-            // 
-            // dtgDatosCantProvincia
-            // 
-            this.dtgDatosCantProvincia.AllowUserToAddRows = false;
-            this.dtgDatosCantProvincia.AllowUserToDeleteRows = false;
-            this.dtgDatosCantProvincia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgDatosCantProvincia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDatosCantProvincia.Location = new System.Drawing.Point(8, 53);
-            this.dtgDatosCantProvincia.Name = "dtgDatosCantProvincia";
-            this.dtgDatosCantProvincia.ReadOnly = true;
-            this.dtgDatosCantProvincia.RowHeadersWidth = 62;
-            this.dtgDatosCantProvincia.RowTemplate.Height = 28;
-            this.dtgDatosCantProvincia.Size = new System.Drawing.Size(302, 150);
-            this.dtgDatosCantProvincia.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(314, 26);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cantidad de casos por género";
-            // 
-            // FrmEstadistica
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 630);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1025, 612);
+            this.Controls.Add(this.comboBoxOpcEstadistica);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.chartDona);
+            this.Controls.Add(this.chartBarras);
+            this.ForeColor = System.Drawing.Color.Lavender;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmEstadistica";
+            this.Name = "FrmEsta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEstadistica";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSalir)).EndInit();
+            this.Text = "FrmEsta";
+            this.Load += new System.EventHandler(this.FrmEsta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chartBarras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDona)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosComunes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosDuracion)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosCantGenero)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDatosCantProvincia)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox ptbSalir;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dtgDatosComunes;
-        private System.Windows.Forms.DataGridView dtgDatosDuracion;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dtgDatosCantGenero;
-        private System.Windows.Forms.DataGridView dtgDatosCantProvincia;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxOpcEstadistica;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chartBarras;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chartDona;
     }
 }

@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
             this.cmbProvincia.Items.Add("San José");
             this.cmbProvincia.Items.Add("Alajuela");
             this.cmbProvincia.Items.Add("Heredia");
-            this.cmbProvincia.Items.Add("Cartagp");
+            this.cmbProvincia.Items.Add("Cartago");
             this.cmbProvincia.Items.Add("Guanacaste");
             this.cmbProvincia.Items.Add("Puntarenas");
             this.cmbProvincia.Items.Add("Limón");
@@ -329,6 +329,11 @@ namespace WindowsFormsApp1
         private void cmbProvincia_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

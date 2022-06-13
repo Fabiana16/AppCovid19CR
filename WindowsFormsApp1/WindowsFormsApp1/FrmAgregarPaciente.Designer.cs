@@ -35,6 +35,7 @@ namespace WindowsFormsApp1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
+            this.btnAciones = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreCompleto = new System.Windows.Forms.TextBox();
@@ -43,10 +44,11 @@ namespace WindowsFormsApp1
             this.cmbProvincia = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAciones = new FontAwesome.Sharp.IconButton();
+            this.buttonExit = new FontAwesome.Sharp.IconPictureBox();
             this.panelFondoGP.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFondoGP
@@ -65,6 +67,7 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -125,6 +128,26 @@ namespace WindowsFormsApp1
             this.txtEdad.Size = new System.Drawing.Size(294, 39);
             this.txtEdad.TabIndex = 9;
             this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
+            // 
+            // btnAciones
+            // 
+            this.btnAciones.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAciones.FlatAppearance.BorderSize = 0;
+            this.btnAciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAciones.ForeColor = System.Drawing.Color.White;
+            this.btnAciones.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAciones.IconColor = System.Drawing.Color.White;
+            this.btnAciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAciones.IconSize = 41;
+            this.btnAciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAciones.Location = new System.Drawing.Point(324, 370);
+            this.btnAciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAciones.Name = "btnAciones";
+            this.btnAciones.Size = new System.Drawing.Size(198, 70);
+            this.btnAciones.TabIndex = 8;
+            this.btnAciones.Text = "Agregar";
+            this.btnAciones.UseVisualStyleBackColor = false;
+            this.btnAciones.Click += new System.EventHandler(this.btnAciones_Click);
             // 
             // label4
             // 
@@ -200,25 +223,19 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 0;
             this.label1.Text = "Cédula:";
             // 
-            // btnAciones
+            // buttonExit
             // 
-            this.btnAciones.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnAciones.FlatAppearance.BorderSize = 0;
-            this.btnAciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAciones.ForeColor = System.Drawing.Color.White;
-            this.btnAciones.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAciones.IconColor = System.Drawing.Color.White;
-            this.btnAciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAciones.IconSize = 41;
-            this.btnAciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAciones.Location = new System.Drawing.Point(324, 370);
-            this.btnAciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAciones.Name = "btnAciones";
-            this.btnAciones.Size = new System.Drawing.Size(198, 70);
-            this.btnAciones.TabIndex = 8;
-            this.btnAciones.Text = "Agregar";
-            this.btnAciones.UseVisualStyleBackColor = false;
-            this.btnAciones.Click += new System.EventHandler(this.btnAciones_Click);
+            this.buttonExit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.buttonExit.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
+            this.buttonExit.IconColor = System.Drawing.Color.White;
+            this.buttonExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonExit.IconSize = 46;
+            this.buttonExit.Location = new System.Drawing.Point(961, 36);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(56, 46);
+            this.buttonExit.TabIndex = 1;
+            this.buttonExit.TabStop = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // FrmAgregarPaciente
             // 
@@ -238,6 +255,7 @@ namespace WindowsFormsApp1
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,5 +276,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox cmbProvincia;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconPictureBox buttonExit;
     }
 }

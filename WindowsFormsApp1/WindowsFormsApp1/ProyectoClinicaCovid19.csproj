@@ -66,12 +66,6 @@
     <Compile Include="FrmBusquedaUsuario.Designer.cs">
       <DependentUpon>FrmBusquedaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEsta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEsta.Designer.cs">
-      <DependentUpon>FrmEsta.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmEstadistica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,9 +109,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBusquedaUsuario.resx">
       <DependentUpon>FrmBusquedaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEsta.resx">
-      <DependentUpon>FrmEsta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstadistica.resx">
       <DependentUpon>FrmEstadistica.cs</DependentUpon>
