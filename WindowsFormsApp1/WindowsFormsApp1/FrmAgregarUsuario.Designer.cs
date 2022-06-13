@@ -40,13 +40,16 @@
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonExit = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -176,6 +179,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre de usuario:";
             // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.MidnightBlue;
+            this.buttonExit.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleRight;
+            this.buttonExit.IconColor = System.Drawing.Color.White;
+            this.buttonExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonExit.IconSize = 46;
+            this.buttonExit.Location = new System.Drawing.Point(949, 30);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(56, 46);
+            this.buttonExit.TabIndex = 12;
+            this.buttonExit.TabStop = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // FrmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -191,6 +208,7 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -208,5 +226,6 @@
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconPictureBox buttonExit;
     }
 }
