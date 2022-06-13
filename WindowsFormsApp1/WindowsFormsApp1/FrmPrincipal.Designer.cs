@@ -38,7 +38,6 @@ namespace WindowsFormsApp1
             this.btnAddPaci = new FontAwesome.Sharp.IconButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFondo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.FrmDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -190,7 +189,6 @@ namespace WindowsFormsApp1
             // panelFondo
             // 
             this.panelFondo.BackColor = System.Drawing.Color.Lavender;
-            this.panelFondo.Controls.Add(this.label1);
             this.panelFondo.Controls.Add(this.pictureBox2);
             this.panelFondo.Location = new System.Drawing.Point(260, 0);
             this.panelFondo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -198,15 +196,6 @@ namespace WindowsFormsApp1
             this.panelFondo.Size = new System.Drawing.Size(1199, 848);
             this.panelFondo.TabIndex = 6;
             this.panelFondo.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmFondo_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // FrmPrincipal
             // 
@@ -226,7 +215,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelFondo.ResumeLayout(false);
-            this.panelFondo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -241,7 +229,6 @@ namespace WindowsFormsApp1
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Panel panelFondo;
-        private System.Windows.Forms.Label label1;
     }
 }
 
