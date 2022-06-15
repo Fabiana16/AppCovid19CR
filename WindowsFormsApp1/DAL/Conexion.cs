@@ -723,5 +723,70 @@ namespace DAL
                 throw ex;
             }
         }//fin del método ConsultarCasosGenero
+        public DataSet BuscarUsuarioLogin(string login)
+        {
+            try
+            {
+                //se instancia una conexion
+                this.connection = new SqlConnection(this.strConexion);
+                //se intenta abrir la conexión
+                this.connection.Open();
+                //se instancia el comando 
+                this.command = new SqlCommand();
+                //se asigna la conección al comando
+                this.command.Connection = this.connection;
+                //se indica el tipo de comando
+                this.command.CommandType = CommandType.StoredProcedure;
+                //se indica el nombre del procedimiento
+                this.command.CommandText = "[Sp_cons_Usuarios]";
+                //asignamos el valor del parámetro del procedimiento
+                this.command.Parameters.AddWithValue("@login", login);
+                //se intancia un adaptador
+                this.dataAdapter = new SqlDataAdapter();
+                //se instancia un dataSet para guardar los datos
+                this.dataAdapter.SelectCommand = this.command;
+                this.dataSet = new DataSet();
+                //se llena el data set con los datos del comando
+                this.dataAdapter.Fill(this.dataSet);
+                //se cierran los recursos
+                this.connection.Close();
+                this.connection.Dispose();
+                this.command.Dispose();
+                this.dataAdapter.Dispose();
+                //se retorna el dataset
+                return this.dataSet;
+            }//fin try
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método para buscar Usuarios por login
+        public void AgregarUsuarios(Usuario usuario)
+        {
+            try
+            {
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Sp_agr_Usuario]";
+                this.command.Parameters.AddWithValue("@login", usuario.login);
+                this.command.Parameters.AddWithValue("@password", usuario.password);
+                this.command.Parameters.AddWithValue("@email", usuario.email);
+                this.command.Parameters.AddWithValue("@rol", usuario.rol);
+                this.command.ExecuteNonQuery();
+                //Cierre de conexión
+                this.connection.Close();
+                //Liberamos los recursos
+                this.connection.Dispose();
+                this.command.Dispose();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método AgregarPacientes
     }//fin de la clase conexion
 }//fin del namespace
