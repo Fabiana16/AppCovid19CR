@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
                 }
                 if (this.txtEdad.Text.Trim().Equals(""))
                 {
-                    throw new Exception("Error el campo Nombre Completo no debe estar vacio");
+                    throw new Exception("Error el campo Edad no debe estar vacio");
                 }
             }
             catch (Exception ex)
@@ -95,7 +95,6 @@ namespace WindowsFormsApp1
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }//fin del método crear objeto paciente

@@ -787,6 +787,6 @@ namespace DAL
             {
                 throw ex;
             }
-        }//fin del método AgregarPacientes
+        }//fin del método AgregarUsuarios
     }//fin de la clase conexion
 }//fin del namespace

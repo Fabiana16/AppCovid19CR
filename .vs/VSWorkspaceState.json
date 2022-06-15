@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WindowsFormsApp1",
+    "\\WindowsFormsApp1\\WindowsFormsApp1"
   ],
-  "SelectedNode": "\\AppCovid19CR.sln",
+  "SelectedNode": "\\WindowsFormsApp1\\WindowsFormsApp1\\FrmAgregarUsuario.cs",
   "PreviewInSolutionExplorer": false
 }

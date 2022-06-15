@@ -32,17 +32,17 @@
             this.buttonExit = new FontAwesome.Sharp.IconPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfirmarContrasena = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAciones = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNombreCompleto = new System.Windows.Forms.TextBox();
-            this.txtCedula = new System.Windows.Forms.TextBox();
-            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,15 +89,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtConfirmarContrasena);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnAciones);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtNombreCompleto);
-            this.groupBox1.Controls.Add(this.txtCedula);
-            this.groupBox1.Controls.Add(this.cmbSexo);
+            this.groupBox1.Controls.Add(this.txtContrasena);
+            this.groupBox1.Controls.Add(this.txtLogin);
+            this.groupBox1.Controls.Add(this.cmbRol);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Ebrima", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,13 +110,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del usuario";
             // 
-            // textBox1
+            // txtConfirmarContrasena
             // 
-            this.textBox1.Location = new System.Drawing.Point(303, 268);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(330, 45);
-            this.textBox1.TabIndex = 11;
+            this.txtConfirmarContrasena.Location = new System.Drawing.Point(304, 203);
+            this.txtConfirmarContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmarContrasena.Name = "txtConfirmarContrasena";
+            this.txtConfirmarContrasena.PasswordChar = '*';
+            this.txtConfirmarContrasena.Size = new System.Drawing.Size(329, 45);
+            this.txtConfirmarContrasena.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(289, 38);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Confirmar contraseña:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(303, 268);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(330, 45);
+            this.txtEmail.TabIndex = 11;
             // 
             // label5
             // 
@@ -145,6 +163,7 @@
             this.btnAciones.TabIndex = 8;
             this.btnAciones.Text = "Agregar";
             this.btnAciones.UseVisualStyleBackColor = false;
+            this.btnAciones.Click += new System.EventHandler(this.btnAciones_Click);
             // 
             // label3
             // 
@@ -155,32 +174,32 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Email:";
             // 
-            // txtNombreCompleto
+            // txtContrasena
             // 
-            this.txtNombreCompleto.Location = new System.Drawing.Point(304, 142);
-            this.txtNombreCompleto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.PasswordChar = '*';
-            this.txtNombreCompleto.Size = new System.Drawing.Size(329, 45);
-            this.txtNombreCompleto.TabIndex = 5;
+            this.txtContrasena.Location = new System.Drawing.Point(304, 142);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(329, 45);
+            this.txtContrasena.TabIndex = 5;
             // 
-            // txtCedula
+            // txtLogin
             // 
-            this.txtCedula.Location = new System.Drawing.Point(304, 80);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCedula.MaxLength = 9;
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(329, 45);
-            this.txtCedula.TabIndex = 4;
+            this.txtLogin.Location = new System.Drawing.Point(304, 80);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLogin.MaxLength = 35;
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(329, 45);
+            this.txtLogin.TabIndex = 4;
             // 
-            // cmbSexo
+            // cmbRol
             // 
-            this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.Location = new System.Drawing.Point(303, 339);
-            this.cmbSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(330, 46);
-            this.cmbSexo.TabIndex = 3;
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(303, 339);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(330, 46);
+            this.cmbRol.TabIndex = 3;
             // 
             // label2
             // 
@@ -200,24 +219,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre de usuario:";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(304, 203);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(329, 45);
-            this.textBox2.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 38);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Confirmar contraseña:";
-            // 
             // FrmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -230,6 +231,7 @@
             this.Name = "FrmAgregarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAgregarUsuario";
+            this.Load += new System.EventHandler(this.FrmAgregarUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
@@ -243,17 +245,17 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label5;
         private FontAwesome.Sharp.IconButton btnAciones;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombreCompleto;
-        private System.Windows.Forms.TextBox txtCedula;
-        private System.Windows.Forms.ComboBox cmbSexo;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox buttonExit;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtConfirmarContrasena;
         private System.Windows.Forms.Label label4;
     }
 }
