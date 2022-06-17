@@ -141,11 +141,25 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }//
+        public void mostrarFrmLogin()
+        {
+            try
+            {
+                FrmLogin frm = new FrmLogin();
+                frm.ShowDialog();
+                frm.Dispose();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+        }
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             try
             {
+                this.mostrarFrmLogin();
                 this.CargarCantCasos();
             }
             catch (Exception)
@@ -333,7 +347,7 @@ namespace WindowsFormsApp1
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            this.Salir();
+            this.mostrarFrmLogin();
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
