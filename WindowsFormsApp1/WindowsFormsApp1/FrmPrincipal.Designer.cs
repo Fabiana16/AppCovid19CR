@@ -55,8 +55,9 @@ namespace WindowsFormsApp1
             this.FrmDashboard.Controls.Add(this.btnAddPaci);
             this.FrmDashboard.Dock = System.Windows.Forms.DockStyle.Left;
             this.FrmDashboard.Location = new System.Drawing.Point(0, 0);
+            this.FrmDashboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FrmDashboard.Name = "FrmDashboard";
-            this.FrmDashboard.Size = new System.Drawing.Size(231, 681);
+            this.FrmDashboard.Size = new System.Drawing.Size(260, 851);
             this.FrmDashboard.TabIndex = 7;
             // 
             // iconButton2
@@ -70,10 +71,10 @@ namespace WindowsFormsApp1
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton2.IconSize = 40;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 452);
+            this.iconButton2.Location = new System.Drawing.Point(0, 565);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(231, 52);
+            this.iconButton2.Size = new System.Drawing.Size(260, 65);
             this.iconButton2.TabIndex = 4;
             this.iconButton2.Text = "Usuarios";
             this.iconButton2.UseVisualStyleBackColor = true;
@@ -91,10 +92,10 @@ namespace WindowsFormsApp1
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCerrarSesion.IconSize = 40;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 629);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 786);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(231, 52);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(260, 65);
             this.btnCerrarSesion.TabIndex = 3;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -103,9 +104,10 @@ namespace WindowsFormsApp1
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2022_05_30_at_10_08_51_PM_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 196);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -121,10 +123,10 @@ namespace WindowsFormsApp1
             this.btnAddRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddRegistro.IconSize = 40;
             this.btnAddRegistro.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnAddRegistro.Location = new System.Drawing.Point(3, 318);
+            this.btnAddRegistro.Location = new System.Drawing.Point(3, 398);
             this.btnAddRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRegistro.Name = "btnAddRegistro";
-            this.btnAddRegistro.Size = new System.Drawing.Size(228, 55);
+            this.btnAddRegistro.Size = new System.Drawing.Size(256, 69);
             this.btnAddRegistro.TabIndex = 1;
             this.btnAddRegistro.Text = "Agregar Registro";
             this.btnAddRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,10 +144,10 @@ namespace WindowsFormsApp1
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton1.IconSize = 40;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(3, 386);
+            this.iconButton1.Location = new System.Drawing.Point(3, 482);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(231, 52);
+            this.iconButton1.Size = new System.Drawing.Size(260, 65);
             this.iconButton1.TabIndex = 2;
             this.iconButton1.Text = "Estadísticas ";
             this.iconButton1.UseVisualStyleBackColor = true;
@@ -163,10 +165,10 @@ namespace WindowsFormsApp1
             this.btnAddPaci.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddPaci.IconSize = 40;
             this.btnAddPaci.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddPaci.Location = new System.Drawing.Point(3, 255);
+            this.btnAddPaci.Location = new System.Drawing.Point(3, 319);
             this.btnAddPaci.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddPaci.Name = "btnAddPaci";
-            this.btnAddPaci.Size = new System.Drawing.Size(231, 59);
+            this.btnAddPaci.Size = new System.Drawing.Size(260, 74);
             this.btnAddPaci.TabIndex = 0;
             this.btnAddPaci.Text = "Agregar Paciente";
             this.btnAddPaci.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -176,9 +178,10 @@ namespace WindowsFormsApp1
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.WhatsApp_Image_2022_05_30_at_10_081;
-            this.pictureBox2.Location = new System.Drawing.Point(230, 30);
+            this.pictureBox2.Location = new System.Drawing.Point(259, 38);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(600, 544);
+            this.pictureBox2.Size = new System.Drawing.Size(675, 680);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -187,17 +190,18 @@ namespace WindowsFormsApp1
             // 
             this.panelFondo.BackColor = System.Drawing.Color.Lavender;
             this.panelFondo.Controls.Add(this.pictureBox2);
-            this.panelFondo.Location = new System.Drawing.Point(231, 0);
+            this.panelFondo.Location = new System.Drawing.Point(260, 0);
+            this.panelFondo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelFondo.Name = "panelFondo";
-            this.panelFondo.Size = new System.Drawing.Size(1066, 678);
+            this.panelFondo.Size = new System.Drawing.Size(1199, 848);
             this.panelFondo.TabIndex = 6;
             this.panelFondo.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmFondo_Paint);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 681);
+            this.ClientSize = new System.Drawing.Size(1460, 851);
             this.Controls.Add(this.panelFondo);
             this.Controls.Add(this.FrmDashboard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

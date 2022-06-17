@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             {
                 throw ex;
             }
-        }//fin del método EliminarProducto
+        }//fin del método EliminarPaciente
         //
         private void btnEliminar_Click(object sender, EventArgs e)
         {

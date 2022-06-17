@@ -40,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxOpcEstadistica = new System.Windows.Forms.ComboBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.chartBarras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDona)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,13 +55,14 @@
             this.chartBarras.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartBarras.Legends.Add(legend1);
-            this.chartBarras.Location = new System.Drawing.Point(212, 198);
+            this.chartBarras.Location = new System.Drawing.Point(238, 248);
+            this.chartBarras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartBarras.Name = "chartBarras";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartBarras.Series.Add(series1);
-            this.chartBarras.Size = new System.Drawing.Size(677, 402);
+            this.chartBarras.Size = new System.Drawing.Size(762, 502);
             this.chartBarras.TabIndex = 0;
             this.chartBarras.Text = "chart1";
             // 
@@ -73,7 +75,8 @@
             this.chartDona.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartDona.Legends.Add(legend2);
-            this.chartDona.Location = new System.Drawing.Point(250, 198);
+            this.chartDona.Location = new System.Drawing.Point(287, 248);
+            this.chartDona.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartDona.Name = "chartDona";
             this.chartDona.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series2.BackSecondaryColor = System.Drawing.Color.Transparent;
@@ -84,7 +87,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chartDona.Series.Add(series2);
-            this.chartDona.Size = new System.Drawing.Size(650, 390);
+            this.chartDona.Size = new System.Drawing.Size(731, 488);
             this.chartDona.TabIndex = 1;
             this.chartDona.Text = "chart2";
             // 
@@ -94,8 +97,9 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1025, 99);
+            this.panel2.Size = new System.Drawing.Size(1153, 124);
             this.panel2.TabIndex = 19;
             // 
             // label6
@@ -104,9 +108,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Ebrima", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(44, 35);
+            this.label6.Location = new System.Drawing.Point(50, 44);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(193, 38);
+            this.label6.Size = new System.Drawing.Size(228, 45);
             this.label6.TabIndex = 0;
             this.label6.Text = "ESTADISTICAS";
             // 
@@ -115,26 +119,40 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(92, 148);
+            this.label1.Location = new System.Drawing.Point(104, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 28);
+            this.label1.Size = new System.Drawing.Size(288, 32);
             this.label1.TabIndex = 20;
             this.label1.Text = "Elija el tipo de estadistica:";
             // 
             // comboBoxOpcEstadistica
             // 
             this.comboBoxOpcEstadistica.FormattingEnabled = true;
-            this.comboBoxOpcEstadistica.Location = new System.Drawing.Point(345, 148);
+            this.comboBoxOpcEstadistica.Location = new System.Drawing.Point(388, 185);
+            this.comboBoxOpcEstadistica.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxOpcEstadistica.Name = "comboBoxOpcEstadistica";
-            this.comboBoxOpcEstadistica.Size = new System.Drawing.Size(346, 24);
+            this.comboBoxOpcEstadistica.Size = new System.Drawing.Size(389, 28);
             this.comboBoxOpcEstadistica.TabIndex = 21;
             this.comboBoxOpcEstadistica.SelectionChangeCommitted += new System.EventHandler(this.comboBoxOpcEstadistica_SelectionChangeCommitted);
             // 
-            // FrmEsta
+            // iconButton1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(959, 543);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(8, 8);
+            this.iconButton1.TabIndex = 22;
+            this.iconButton1.Text = "iconButton1";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
+            // FrmEstadistica
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1025, 612);
+            this.ClientSize = new System.Drawing.Size(1153, 765);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.comboBoxOpcEstadistica);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -142,7 +160,8 @@
             this.Controls.Add(this.chartBarras);
             this.ForeColor = System.Drawing.Color.Lavender;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmEsta";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FrmEstadistica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEsta";
             this.Load += new System.EventHandler(this.FrmEsta_Load);
@@ -162,5 +181,6 @@
         private System.Windows.Forms.ComboBox comboBoxOpcEstadistica;
         public System.Windows.Forms.DataVisualization.Charting.Chart chartBarras;
         public System.Windows.Forms.DataVisualization.Charting.Chart chartDona;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
