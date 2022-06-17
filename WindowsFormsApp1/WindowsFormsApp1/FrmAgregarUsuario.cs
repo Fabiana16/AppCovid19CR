@@ -80,7 +80,11 @@ namespace WindowsFormsApp1
                 throw ex; 
             }
         }// fin del método crearObjetoUsuario
-        //método encargado de agregar los usaurios al sistema
+         //método encargado de agregar los usaurios al sistema
+        public void setLoginConsultar(string valor)
+        {
+            this.loginConsultar = valor;
+        }//fin del método setLoginConsultar
         public void limpiarFormulario()
         {
             try
@@ -97,6 +101,10 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+        public void setFuncion(int valor)
+        {
+            this.function = valor;
+        }//fin del método setFuncion
         public void AgregarUsuario()
         {
             try
@@ -123,8 +131,25 @@ namespace WindowsFormsApp1
             this.Close();
         }
         public void consultarUsuario()
-        { 
-        
+        {
+            try
+            {
+                this.usuario = this.conexion.consultarUsuarioLogin(this.loginConsultar);
+                if (this.usuario!=null)
+                {
+                    this.txtLogin.Text = ""+this.usuario.login;
+                    this.txtContrasena.Text = "" + this.usuario.password;
+                    this.txtEmail.Text = ""+this.usuario.email;
+                    this.cmbRol.Text = "" + this.usuario.rol;
+                    this.txtConfirmarContrasena.Text = ""+this.usuario.password;
+                  
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }//fin del método consultar Usuario
         private void FrmAgregarUsuario_Load(object sender, EventArgs e)
         {
@@ -146,7 +171,18 @@ namespace WindowsFormsApp1
                 throw;
             }
         }
+        public void modificarUsuario()
+        {
+            try
+            {
+                this.conexion.modificarUsuario(this.usuario);
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+        }
         private void btnAciones_Click(object sender, EventArgs e)
         {
             try
@@ -158,9 +194,13 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
+                    if (this.cmbRol.SelectedItem.ToString().Equals("Selecione una opción"))
+                    {
+                        throw new Exception("Por favor selecione un rol para el usuario");
+                    }
                     if (MessageBox.Show("Desea aplicar los cambios", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        //this.modificarUsuario();
+                        this.modificarUsuario();
                         this.limpiarFormulario();
                         MessageBox.Show("Usuario Modificado Correctamente.", "Proceso aplicado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Dispose();
@@ -170,7 +210,7 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
 
-                throw ex;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

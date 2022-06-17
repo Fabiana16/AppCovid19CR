@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dtgDatos = new System.Windows.Forms.DataGridView();
@@ -35,9 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -67,6 +71,7 @@
             // 
             this.dtgDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDatos.ContextMenuStrip = this.contextMenuStrip1;
             this.dtgDatos.Location = new System.Drawing.Point(14, 280);
             this.dtgDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgDatos.Name = "dtgDatos";
@@ -74,6 +79,7 @@
             this.dtgDatos.RowTemplate.Height = 28;
             this.dtgDatos.Size = new System.Drawing.Size(978, 532);
             this.dtgDatos.TabIndex = 19;
+            this.dtgDatos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtgDatos_MouseDoubleClick);
             // 
             // iconPictureBox1
             // 
@@ -122,7 +128,23 @@
             this.btnAgregarUsuario.TabIndex = 23;
             this.btnAgregarUsuario.Text = "Agregar";
             this.btnAgregarUsuario.UseVisualStyleBackColor = false;
-            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarPaciente_Click);
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 75);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(240, 38);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // FrmBusquedaUsuario
             // 
@@ -144,6 +166,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,5 +180,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Button btnAgregarUsuario;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }

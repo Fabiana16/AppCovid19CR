@@ -788,5 +788,95 @@ namespace DAL
                 throw ex;
             }
         }//fin del método AgregarUsuarios
+        public void modificarUsuario(Usuario usuario)
+        {
+            try
+            {
+                //se instancia la conexión
+                this.connection = new SqlConnection(this.strConexion);
+                //se abre la conexión
+                this.connection.Open();
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Sp_upd_Usuario]";
+                //se asignan los parámetros
+                this.command.Parameters.AddWithValue("@login", usuario.login);
+                this.command.Parameters.AddWithValue("@password", usuario.password);
+                this.command.Parameters.AddWithValue("@email", usuario.email);
+                this.command.Parameters.AddWithValue("@rol", usuario.rol);
+
+                //se ejecuta el comando
+                this.command.ExecuteNonQuery();
+                this.command.Dispose();
+                this.connection.Dispose();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método editar Usuario
+        public Usuario consultarUsuarioLogin(string login)
+        {
+            try
+            {
+                Usuario usuario = null;
+                this.connection = new SqlConnection(this.strConexion);
+                //se abre la conexión
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Sp_cnsUsuarioLogin]";
+
+                this.command.Parameters.AddWithValue("@login", login);
+                this.dataReader = this.command.ExecuteReader();
+                //pregunta si tiene datos
+                if (this.dataReader.Read())
+                {
+                    usuario = new Usuario();
+                    usuario.login = this.dataReader.GetValue(0).ToString();
+                    usuario.email = this.dataReader.GetValue(1).ToString();
+                    usuario.password = this.dataReader.GetValue(2).ToString();
+                    usuario.rol =   this.dataReader.GetValue(3).ToString();
+                    //cerramos conexion
+                    this.connection.Close();
+                    //liberamos recursos
+                    this.connection.Dispose();
+                    this.command.Dispose();
+                    this.dataReader = null;
+                }//fin if
+                 //se retorna el objeto
+                return usuario;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método consultarUsuarioLogin
+        public void EliminarUsuario(string login)
+        {
+            try
+            {
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[Del_Usuario]";
+                this.command.Parameters.AddWithValue("@login",login);
+                this.command.ExecuteNonQuery();
+                this.connection.Close();
+                this.connection.Dispose();
+                this.command.Dispose();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }//fin del método EliminarPaciente
     }//fin de la clase conexion
 }//fin del namespace

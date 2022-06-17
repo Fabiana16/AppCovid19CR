@@ -135,7 +135,7 @@ namespace WindowsFormsApp1
         public void setCedulaConsultar(string valor)
         {
             this.cedulaConsultar = valor;
-        }//fin del método setLoginConsultar
+        }//fin del método setCedulaConsultar
         //metodo encargado de agregar los pacientes
         public void AgregarPaciente()
         {
