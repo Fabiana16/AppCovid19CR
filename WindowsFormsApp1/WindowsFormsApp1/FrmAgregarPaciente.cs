@@ -169,7 +169,15 @@ namespace WindowsFormsApp1
                 this.crearObjetoPaciente();
                 if (this.function == 0)
                 {
-                    this.AgregarPaciente();
+                    Paciente temp = this.conexion.BuscarPacienteCedula(this.txtCedula.Text.Trim());
+                    if (temp == null)
+                    {
+                        this.AgregarPaciente();
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Error el Paciente ya se encuentra registrado");
+                    }
                    
                 }//fin if
                 else

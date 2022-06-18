@@ -190,7 +190,15 @@ namespace WindowsFormsApp1
                 this.crearObjetoUsuario();
                 if (this.function==0)
                 {
-                    this.AgregarUsuario();
+                    Usuario temp = this.conexion.consultarUsuarioLogin(this.txtLogin.Text.Trim());
+                    if (temp == null)
+                    {
+                        this.AgregarUsuario();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error, ya existe un usuario con ese Login por favor digite uno distinto");
+                    }
                 }
                 else
                 {
