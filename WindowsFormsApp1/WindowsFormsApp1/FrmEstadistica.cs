@@ -36,22 +36,27 @@ namespace WindowsFormsApp1
         {
             if (comboBoxOpcEstadistica.SelectedIndex == 0)
             {
-                chartBarras.Series[0].Points.DataBindXY(conexion.graficoGeneroPrueba(), conexion.graficoGeneroPrueba2());
                 chartBarras.Visible = true;
+                chartDona.Visible = false;
+                chartBarras.Series[0].Points.DataBindXY(conexion.graficoGeneroPrueba(), conexion.graficoGeneroPrueba2());
+                
             }
             if (comboBoxOpcEstadistica.SelectedIndex == 1)
             {
                 chartDona.Visible = true;
+                chartBarras.Visible = false;
                 chartDona.Series[0].Points.DataBindXY(conexion.graficoCantSintomasProvincia(), conexion.graficoCantSintomasProvincia2());
             }
             if (comboBoxOpcEstadistica.SelectedIndex == 2)
             {
                 chartBarras.Visible = true;
+                chartDona.Visible = false;
                 chartBarras.Series[0].Points.DataBindXY(conexion.graficoAsintomaticosGenero(), conexion.graficoAsintomaticosGenero2());
             }
             if (comboBoxOpcEstadistica.SelectedIndex == 3)
             {
                 chartBarras.Visible = true;
+                chartDona.Visible = false;
                 chartBarras.Series[0].Points.DataBindXY(conexion.graficoSintomasComunes(), conexion.graficoSintomasComunes2());
             }
 

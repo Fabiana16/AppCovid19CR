@@ -87,5 +87,10 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

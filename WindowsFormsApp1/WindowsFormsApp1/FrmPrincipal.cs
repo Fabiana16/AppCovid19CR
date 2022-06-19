@@ -359,6 +359,16 @@ namespace WindowsFormsApp1
             frm.Dock = DockStyle.Fill;
             frm.Show();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            panelFondo.Visible = true;
+        }
     }
 }//fin del namespace
 
