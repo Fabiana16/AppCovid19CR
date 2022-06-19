@@ -327,19 +327,24 @@ namespace WindowsFormsApp1
             {
                 if (this.txtOpcional.Text.Trim().Equals(""))
                 {
-                    if (this.cmbSintomas.SelectedItem.ToString().Equals("Selecione una opción"))
+                    if (!this.txtDuracion1.Text.Trim().Equals(""))
                     {
-                        MessageBox.Show("Por favor selecione un síntoma a agregar");
+                        if (this.cmbSintomas.SelectedItem.ToString().Equals("Selecione una opción"))
+                        {
+                            MessageBox.Show("Por favor selecione un síntoma a agregar");
+                        }
+                        else
+                        {
+                            this.AgregarSintoma();
+                        }
+                    }
+                    else
+                    {
+                        
+                        MessageBox.Show("Por favor selecione la duración del síntoma");
                     }
                 }
-                if (this.txtDuracion1.Text.Trim().Equals(""))
-                {
-                    MessageBox.Show("Por favor selecione la duración del síntoma");
-                }
-                else
-                {
-                    this.AgregarSintoma();
-                }
+           
             }
         }
     }//fin de la clase
