@@ -372,6 +372,7 @@ namespace WindowsFormsApp1
                 }
 
             }
+            //validacionesRolesUsuario
             catch (Exception ex)
             {
 

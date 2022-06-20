@@ -165,7 +165,7 @@ namespace WindowsFormsApp1
             this.btnAddPaci.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddPaci.IconSize = 40;
             this.btnAddPaci.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddPaci.Location = new System.Drawing.Point(3, 319);
+            this.btnAddPaci.Location = new System.Drawing.Point(3, 318);
             this.btnAddPaci.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddPaci.Name = "btnAddPaci";
             this.btnAddPaci.Size = new System.Drawing.Size(260, 74);
