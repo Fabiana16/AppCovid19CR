@@ -23,8 +23,8 @@ namespace WindowsFormsApp1
             this.conexion = new Conexion(FrmPrincipal.ObtenerStringConexion());
             this.cmbRol.Items.Add("Selecione una opción");
             this.cmbRol.Items.Add("Administrador");
-            this.cmbRol.Items.Add("Auditor");
-            this.cmbRol.Items.Add("Invitado");
+            this.cmbRol.Items.Add("Usuario médico");
+            this.cmbRol.Items.Add("Administrador del Ministerio de Salud");
             this.cmbRol.Text = "Selecione una opción";
             this.cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
         }

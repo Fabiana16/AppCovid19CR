@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class FrmPrincipal : Form
     {
         private Conexion conexion;
-       
+        private string rolUsuario;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -147,6 +147,8 @@ namespace WindowsFormsApp1
             {
                 FrmLogin frm = new FrmLogin();
                 frm.ShowDialog();
+                this.rolUsuario = this.conexion.consultarUsuarioLogin(frm.consultarRolUsuario()).rol;
+                this.validacionesRolesUsuario();
                 frm.Dispose();
             }
             catch (Exception ex)
@@ -160,6 +162,7 @@ namespace WindowsFormsApp1
             try
             {
                 this.mostrarFrmLogin();
+               
                 this.CargarCantCasos();
             }
             catch (Exception)
@@ -347,18 +350,44 @@ namespace WindowsFormsApp1
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            this.btnUsuarios.Enabled = true;
+            this.btnAddPaci.Enabled = true;
+            this.btnAddRegistro.Enabled = true;
+            this.btnEstadistica.Enabled = true;
             this.mostrarFrmLogin();
         }
+        public void validacionesRolesUsuario()
+        {
+            try
+            {
+                if (this.rolUsuario.Equals("Usuario médico"))
+                {
+                    this.btnUsuarios.Enabled = false;
+                }
+                if (this.rolUsuario.Equals("Administrador del Ministerio de Salud"))
+                {
+                    this.btnUsuarios.Enabled = false;
+                    this.btnAddPaci.Enabled = false;
+                    this.btnAddRegistro.Enabled = false;
+                }
 
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         private void iconButton2_Click(object sender, EventArgs e)
         {
+                panelFondo.Visible = false;
+                FrmBusquedaUsuario frm = new FrmBusquedaUsuario();
+                frm.MdiParent = this;
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
             
-            panelFondo.Visible = false;
-            FrmBusquedaUsuario frm = new FrmBusquedaUsuario();
-            frm.MdiParent = this;
-            frm.Dock = DockStyle.Fill;
-            frm.Show();
         }
+          
     }
 }//fin del namespace
 

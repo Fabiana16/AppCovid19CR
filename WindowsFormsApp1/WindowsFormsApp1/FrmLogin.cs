@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
     {
         private Conexion conexion;
         private Usuario usuario;
+        private string rolValidar;
         public FrmLogin()
         {
             InitializeComponent();
@@ -68,12 +69,17 @@ namespace WindowsFormsApp1
                 throw ex;
             }
         }//fin del método validar contrasena
+        public string consultarRolUsuario()
+        {
+            return this.usuario.login;    
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 if (this.validarContrasena() == true)
                 {
+
                     this.Dispose();
                 }
                 else

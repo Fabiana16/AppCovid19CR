@@ -30,11 +30,11 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.FrmDashboard = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
             this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAddRegistro = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnEstadistica = new FontAwesome.Sharp.IconButton();
             this.btnAddPaci = new FontAwesome.Sharp.IconButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelFondo = new System.Windows.Forms.Panel();
@@ -47,11 +47,11 @@ namespace WindowsFormsApp1
             // FrmDashboard
             // 
             this.FrmDashboard.BackColor = System.Drawing.Color.MidnightBlue;
-            this.FrmDashboard.Controls.Add(this.iconButton2);
+            this.FrmDashboard.Controls.Add(this.btnUsuarios);
             this.FrmDashboard.Controls.Add(this.btnCerrarSesion);
             this.FrmDashboard.Controls.Add(this.pictureBox1);
             this.FrmDashboard.Controls.Add(this.btnAddRegistro);
-            this.FrmDashboard.Controls.Add(this.iconButton1);
+            this.FrmDashboard.Controls.Add(this.btnEstadistica);
             this.FrmDashboard.Controls.Add(this.btnAddPaci);
             this.FrmDashboard.Dock = System.Windows.Forms.DockStyle.Left;
             this.FrmDashboard.Location = new System.Drawing.Point(0, 0);
@@ -60,25 +60,25 @@ namespace WindowsFormsApp1
             this.FrmDashboard.Size = new System.Drawing.Size(260, 851);
             this.FrmDashboard.TabIndex = 7;
             // 
-            // iconButton2
+            // btnUsuarios
             // 
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 565);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(260, 65);
-            this.iconButton2.TabIndex = 4;
-            this.iconButton2.Text = "Usuarios";
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnUsuarios.IconSize = 40;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 565);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(260, 65);
+            this.btnUsuarios.TabIndex = 4;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // btnCerrarSesion
             // 
@@ -133,25 +133,25 @@ namespace WindowsFormsApp1
             this.btnAddRegistro.UseVisualStyleBackColor = true;
             this.btnAddRegistro.Click += new System.EventHandler(this.btnAddRegistro_Click);
             // 
-            // iconButton1
+            // btnEstadistica
             // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(3, 482);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(260, 65);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Estadísticas ";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnEstadistica.FlatAppearance.BorderSize = 0;
+            this.btnEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadistica.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstadistica.ForeColor = System.Drawing.Color.White;
+            this.btnEstadistica.IconChar = FontAwesome.Sharp.IconChar.FileContract;
+            this.btnEstadistica.IconColor = System.Drawing.Color.White;
+            this.btnEstadistica.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnEstadistica.IconSize = 40;
+            this.btnEstadistica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstadistica.Location = new System.Drawing.Point(3, 482);
+            this.btnEstadistica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEstadistica.Name = "btnEstadistica";
+            this.btnEstadistica.Size = new System.Drawing.Size(260, 65);
+            this.btnEstadistica.TabIndex = 2;
+            this.btnEstadistica.Text = "Estadísticas ";
+            this.btnEstadistica.UseVisualStyleBackColor = true;
+            this.btnEstadistica.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnAddPaci
             // 
@@ -220,14 +220,14 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnEstadistica;
         private FontAwesome.Sharp.IconButton btnAddRegistro;
         private System.Windows.Forms.Panel FrmDashboard;
         private FontAwesome.Sharp.IconButton btnAddPaci;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnUsuarios;
         private System.Windows.Forms.Panel panelFondo;
     }
 }
